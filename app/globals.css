@@ -1,0 +1,73 @@
+@import "tailwindcss";
+
+:root {
+  --background: #f9fafb;
+  --foreground: #111827;
+  --card-bg: #ffffff;
+  --card-border: #e5e7eb;
+  --accent: #0284c7;
+  --accent-hover: #0369a1;
+  --subtext: #4b5563;
+  --badge-bg: #f3f4f6;
+  --badge-text: #374151;
+  --header-bg: rgba(249, 250, 251, 0.85);
+  --loader-bg: #ffffff;
+}
+
+html.dark {
+  --background: #0b0f19;
+  --foreground: #f9fafb;
+  --card-bg: #111827;
+  --card-border: #1f2937;
+  --accent: #0ea5e9;
+  --accent-hover: #38bdf8;
+  --subtext: #9ca3af;
+  --badge-bg: #1f2937;
+  --badge-text: #d1d5db;
+  --header-bg: rgba(11, 15, 25, 0.85);
+  --loader-bg: #0b0f19;
+}
+
+@theme inline {
+  --color-background: var(--background);
+  --color-foreground: var(--foreground);
+  --font-sans: var(--font-lexend), sans-serif;
+  --font-display: Chillax, sans-serif;
+  --font-mono: SFMono-Regular, Consolas, "Liberation Mono", Menlo, monospace;
+  --color-card: var(--card-bg);
+  --color-card-border: var(--card-border);
+  --color-accent: var(--accent);
+  --color-accent-hover: var(--accent-hover);
+  --color-subtext: var(--subtext);
+  --color-badge: var(--badge-bg);
+  --color-badge-text: var(--badge-text);
+  --color-header: var(--header-bg);
+}
+
+body {
+  background: var(--background);
+  color: var(--foreground);
+  font-family: var(--font-lexend), sans-serif;
+  transition: background-color 0.5s cubic-bezier(0.4, 0, 0.2, 1), border-color 0.5s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+/* Custom Scrollbar */
+::-webkit-scrollbar {
+  width: 6px;
+  height: 6px;
+}
+
+::-webkit-scrollbar-track {
+  background: var(--background);
+}
+
+::-webkit-scrollbar-thumb {
+  background: var(--card-border);
+  border-radius: 9999px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: var(--accent);
+}
+
+
