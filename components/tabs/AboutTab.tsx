@@ -80,29 +80,57 @@ export default function AboutTab() {
         </h2>
         <div className="border-l-2 border-card-border pl-4 flex flex-col gap-8">
           <div className="relative">
-            <div className="absolute -left-[22px] top-1.5 w-2.5 h-2.5 rounded-full bg-accent border border-background"></div>
-            <span className="text-[10px] font-mono text-accent font-bold">2023 - PRESENT</span>
-            <h4 className="text-xs font-bold text-foreground mt-1">Self-Employed Full-Stack Developer</h4>
+            <div className="absolute -left-[22px] top-1.5 w-2.5 h-2.5 rounded-full bg-accent border border-background animate-pulse"></div>
+            <span className="text-[10px] font-mono text-accent font-bold">APR 2026 - PRESENT</span>
+            <h4 className="text-xs font-bold text-foreground mt-1">
+              Frontend Developer <span className="text-subtext font-normal">• Safe Transact Ltd (Internship)</span>
+            </h4>
             <p className="text-[11px] text-subtext mt-1.5 max-w-2xl leading-relaxed">
-              Building client web and mobile solutions. Designing transactional databases with PostgreSQL, writing APIs in Node.js, and deploying high-speed mobile interfaces using React Native and Expo.
+              Building and maintaining responsive, high-performance web applications using React and Next.js. Collaborating on payment gateway integrations, managing state workflows, and optimizing layout performance. (Remote)
             </p>
           </div>
 
           <div className="relative">
             <div className="absolute -left-[22px] top-1.5 w-2.5 h-2.5 rounded-full bg-slate-300 dark:bg-slate-700 border border-background"></div>
-            <span className="text-[10px] font-mono text-[#8f9cae]">2022 - PRESENT</span>
-            <h4 className="text-xs font-bold text-foreground mt-1">Student of Software Engineering • FUTO</h4>
+            <span className="text-[10px] font-mono text-[#8f9cae]">DEC 2024 - APR 2026</span>
+            <h4 className="text-xs font-bold text-foreground mt-1">
+              Frontend Developer <span className="text-subtext font-normal">• Techlift_official (Full-time)</span>
+            </h4>
             <p className="text-[11px] text-subtext mt-1.5 max-w-2xl leading-relaxed">
-              Undergoing structured coursework at Federal University of Technology, Owerri, focusing on Algorithms, Data Structures, Relational Database Systems, and Object-Oriented Software Design.
+              Shipped polished, fully responsive interfaces using Tailwind CSS and Vite. Created real-time database schemas and user authentication flows using Supabase. (Lagos, Nigeria • Remote)
             </p>
           </div>
 
           <div className="relative">
             <div className="absolute -left-[22px] top-1.5 w-2.5 h-2.5 rounded-full bg-slate-300 dark:bg-slate-700 border border-background"></div>
-            <span className="text-[10px] font-mono text-[#8f9cae]">2021 - 2022</span>
-            <h4 className="text-xs font-bold text-foreground mt-1">Technical Virtual Assistant</h4>
+            <span className="text-[10px] font-mono text-[#8f9cae]">JUN 2025 - AUG 2025</span>
+            <h4 className="text-xs font-bold text-foreground mt-1">
+              Back End Developer <span className="text-subtext font-normal">• Exquis (Internship)</span>
+            </h4>
             <p className="text-[11px] text-subtext mt-1.5 max-w-2xl leading-relaxed">
-              Supported e-commerce platforms, managed email templates, sorted database records, and resolved basic styling/layout issues.
+              Developed robust, type-safe RESTful APIs with TypeScript and NestJS. Integrated database logging, mapped relations, and secured server endpoints. (Remote)
+            </p>
+          </div>
+
+          <div className="relative">
+            <div className="absolute -left-[22px] top-1.5 w-2.5 h-2.5 rounded-full bg-slate-300 dark:bg-slate-700 border border-background"></div>
+            <span className="text-[10px] font-mono text-[#8f9cae]">DEC 2024 - MAR 2025</span>
+            <h4 className="text-xs font-bold text-foreground mt-1">
+              Frontend Web Developer <span className="text-subtext font-normal">• Cakkie Foods Ltd. (Internship)</span>
+            </h4>
+            <p className="text-[11px] text-subtext mt-1.5 max-w-2xl leading-relaxed">
+              Built dynamic user flows, transaction/order tracking dashboards, and interactive landing pages using Tailwind CSS and Vite.js. (Uyo, Akwa Ibom State, Nigeria • Remote)
+            </p>
+          </div>
+
+          <div className="relative">
+            <div className="absolute -left-[22px] top-1.5 w-2.5 h-2.5 rounded-full bg-slate-300 dark:bg-slate-700 border border-background"></div>
+            <span className="text-[10px] font-mono text-[#8f9cae]">MAR 2024 - NOV 2024</span>
+            <h4 className="text-xs font-bold text-foreground mt-1">
+              Frontend Web Developer <span className="text-subtext font-normal">• THE TRYBE CITY (Internship)</span>
+            </h4>
+            <p className="text-[11px] text-subtext mt-1.5 max-w-2xl leading-relaxed">
+              Created and optimized modular web components and styling assets for community features. Handled cross-browser testing and responsive layout structures. (Osun State, Nigeria • Hybrid)
             </p>
           </div>
         </div>
