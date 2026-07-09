@@ -1,7 +1,7 @@
 "use client";
 
 interface FooterProps {
-  setActiveTab: (tab: "work" | "about" | "notes" | "contact") => void;
+  setActiveTab: (tab: "work" | "about" | "blogs" | "contact") => void;
 }
 
 export default function Footer({ setActiveTab }: FooterProps) {
@@ -23,7 +23,7 @@ export default function Footer({ setActiveTab }: FooterProps) {
             <span className="text-[9px] text-[#8f9cae] uppercase tracking-wider">Links</span>
             <button onClick={() => setActiveTab("work")} className="text-subtext hover:text-foreground text-left transition-colors">Work</button>
             <button onClick={() => setActiveTab("about")} className="text-subtext hover:text-foreground text-left transition-colors">About</button>
-            <button onClick={() => setActiveTab("notes")} className="text-subtext hover:text-foreground text-left transition-colors">Notes</button>
+            <button onClick={() => setActiveTab("blogs")} className="text-subtext hover:text-foreground text-left transition-colors">Blogs</button>
             <button onClick={() => setActiveTab("contact")} className="text-subtext hover:text-foreground text-left transition-colors">Contact</button>
           </div>
 

@@ -96,7 +96,7 @@ export default function ContactTab() {
                 <Github className="w-4 h-4" />
               </a>
               <a
-                href="www.linkedin.com/in/abdul-azeez-baruwa-505551316"
+                href="https://www.linkedin.com/in/abdul-azeez-baruwa-505551316"
                 target="_blank"
                 rel="noopener noreferrer"
                 className="p-3 rounded-xl border border-card-border bg-card text-subtext hover:text-foreground hover:border-accent transition-all hover:scale-105"

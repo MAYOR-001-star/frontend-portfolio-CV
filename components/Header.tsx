@@ -5,8 +5,8 @@ import Link from "next/link";
 import { Sun, Moon, ArrowLeft } from "lucide-react";
 
 interface HeaderProps {
-  activeTab?: "work" | "about" | "notes" | "contact" | null;
-  setActiveTab?: (tab: "work" | "about" | "notes" | "contact") => void;
+  activeTab?: "work" | "about" | "blogs" | "contact" | null;
+  setActiveTab?: (tab: "work" | "about" | "blogs" | "contact") => void;
   theme: "light" | "dark";
   toggleTheme: () => void;
   showBackLink?: boolean;
@@ -49,7 +49,7 @@ export default function Header({
           {/* Navigation links (Desktop only if not showBackLink) */}
           {!showBackLink ? (
             <nav className="hidden md:flex items-center gap-4 text-xs font-mono">
-              {(["work", "about", "notes", "contact"] as const).map((tab) => {
+              {(["work", "about", "blogs", "contact"] as const).map((tab) => {
                 const isActive = activeTab === tab;
                 const classes = `px-3 py-1.5 rounded-lg transition-all capitalize ${
                   isActive ? "text-accent font-bold" : "text-[#8f9cae] hover:text-foreground"
@@ -122,7 +122,7 @@ export default function Header({
       {!showBackLink && isMobileMenuOpen && (
         <div className="md:hidden fixed top-16 bottom-0 left-0 right-0 bg-background backdrop-blur-2xl transition-colors duration-500 z-30 animate-fade-in flex flex-col items-center justify-center p-6 gap-8">
           <nav className="flex flex-col items-center gap-6 text-xl font-mono">
-            {(["work", "about", "notes", "contact"] as const).map((tab) => {
+            {(["work", "about", "blogs", "contact"] as const).map((tab) => {
               const isActive = activeTab === tab;
               const classes = `px-6 py-2 rounded-xl transition-all text-center capitalize ${
                 isActive ? "text-accent font-bold text-2xl" : "text-[#8f9cae] hover:text-foreground"

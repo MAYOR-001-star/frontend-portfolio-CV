@@ -59,9 +59,9 @@ export default function RootLayout({
   const schemaJson = {
     "@context": "https://schema.org",
     "@type": "Person",
-    "name": "Mayor Azubike",
-    "givenName": "Mayor",
-    "familyName": "Azubike",
+    "name": "Abdul-azeez Baruwa",
+    "givenName": "Abdul-azeez",
+    "familyName": "Baruwa",
     "url": "https://iammayor.vercel.app",
     "image": "https://iammayor.vercel.app/Images/Mayor.jpg",
     "jobTitle": "Full-Stack Developer & Software Engineering Student",
@@ -76,8 +76,8 @@ export default function RootLayout({
       "name": "Federal University of Technology, Owerri"
     },
     "sameAs": [
-      "https://www.linkedin.com/in/mayor-azubike-91512a1aa",
-      "https://github.com/mayorazubike",
+      "https://www.linkedin.com/in/abdul-azeez-baruwa-505551316",
+      "https://github.com/MAYOR-001-star",
       "https://x.com/faya_lordd",
       "https://www.facebook.com/share/1KFSZPzBhS/",
       "https://www.instagram.com/iam__mayor"

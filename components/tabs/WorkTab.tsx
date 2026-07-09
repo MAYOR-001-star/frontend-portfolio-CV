@@ -6,7 +6,7 @@ import { Smartphone, Globe, ArrowUpRight, Linkedin } from "lucide-react";
 import { projects } from "@/app/data/projects";
 
 interface WorkTabProps {
-  setActiveTab: (tab: "work" | "about" | "notes" | "contact") => void;
+  setActiveTab: (tab: "work" | "about" | "blogs" | "contact") => void;
 }
 
 const testimonials = [
@@ -303,7 +303,7 @@ export default function WorkTab({ setActiveTab }: WorkTabProps) {
           <div className="relative w-full h-full rounded-xl overflow-hidden bg-slate-200">
             <Image
               src="/mayor.png"
-              alt="Mayor Azubike Headshot"
+              alt="Mayor Headshot"
               fill
               sizes="(max-width: 768px) 192px, (max-width: 1024px) 224px, 256px"
               priority

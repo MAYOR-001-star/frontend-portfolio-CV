@@ -6,14 +6,14 @@ import Header from "@/components/Header";
 import Footer from "@/components/Footer";
 import WorkTab from "@/components/tabs/WorkTab";
 import AboutTab from "@/components/tabs/AboutTab";
-import NotesTab from "@/components/tabs/NotesTab";
+import BlogsTab from "@/components/tabs/BlogsTab";
 import ContactTab from "@/components/tabs/ContactTab";
 
 const useClientLayoutEffect = typeof window !== "undefined" ? useLayoutEffect : useEffect;
 
 export default function Home() {
   // Navigation State
-  const [activeTab, setActiveTab] = useState<"work" | "about" | "notes" | "contact">("work");
+  const [activeTab, setActiveTab] = useState<"work" | "about" | "blogs" | "contact">("work");
   const [theme, setTheme] = useState<"light" | "dark">("light");
   const [loading, setLoading] = useState(true);
 
@@ -31,7 +31,7 @@ export default function Home() {
     if (typeof window !== "undefined") {
       const params = new URLSearchParams(window.location.search);
       const tab = params.get("tab");
-      if (tab === "work" || tab === "about" || tab === "notes" || tab === "contact") {
+      if (tab === "work" || tab === "about" || tab === "blogs" || tab === "contact") {
         setActiveTab(tab);
       }
     }
@@ -83,7 +83,7 @@ export default function Home() {
         <main className="max-w-4xl mx-auto px-6 py-12 md:py-20">
           {activeTab === "work" && <WorkTab setActiveTab={setActiveTab} />}
           {activeTab === "about" && <AboutTab />}
-          {activeTab === "notes" && <NotesTab />}
+          {activeTab === "blogs" && <BlogsTab />}
           {activeTab === "contact" && <ContactTab />}
         </main>
 
