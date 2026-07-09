@@ -21,15 +21,15 @@ export default function Footer({ setActiveTab }: FooterProps) {
         <div className="flex flex-col sm:flex-row gap-8 sm:gap-10 md:gap-16 text-xs font-mono">
           <div className="flex flex-col gap-2">
             <span className="text-[9px] text-[#8f9cae] uppercase tracking-wider">Links</span>
-            <button onClick={() => setActiveTab("work")} className="text-subtext hover:text-foreground text-left transition-colors">Work</button>
-            <button onClick={() => setActiveTab("about")} className="text-subtext hover:text-foreground text-left transition-colors">About</button>
-            <button onClick={() => setActiveTab("blogs")} className="text-subtext hover:text-foreground text-left transition-colors">Blogs</button>
-            <button onClick={() => setActiveTab("contact")} className="text-subtext hover:text-foreground text-left transition-colors">Contact</button>
+            <button onClick={() => setActiveTab("work")} className="text-subtext hover:text-accent hover:translate-x-1 text-left transition-all duration-300 w-fit cursor-pointer">Work</button>
+            <button onClick={() => setActiveTab("about")} className="text-subtext hover:text-accent hover:translate-x-1 text-left transition-all duration-300 w-fit cursor-pointer">About</button>
+            <button onClick={() => setActiveTab("blogs")} className="text-subtext hover:text-accent hover:translate-x-1 text-left transition-all duration-300 w-fit cursor-pointer">Blogs</button>
+            <button onClick={() => setActiveTab("contact")} className="text-subtext hover:text-accent hover:translate-x-1 text-left transition-all duration-300 w-fit cursor-pointer">Contact</button>
           </div>
 
           <div className="flex flex-col gap-2">
             <span className="text-[9px] text-[#8f9cae] uppercase tracking-wider">Get in Touch</span>
-            <a href="mailto:mayorkunabdulazeez01@gmail.com" className="text-subtext hover:text-foreground transition-colors">mayorkunabdulazeez01@gmail.com</a>
+            <a href="mailto:mayorkunabdulazeez01@gmail.com" className="text-subtext hover:text-accent hover:translate-x-1 transition-all duration-300 w-fit block">mayorkunabdulazeez01@gmail.com</a>
             {/* <span className="text-[#8f9cae] text-[10px]">Owerri, Rivers • Nigeria</span> */}
           </div>
         </div>
