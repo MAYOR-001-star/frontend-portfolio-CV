@@ -26,7 +26,7 @@ const testimonials = [
   },
   {
     name: "Chidi Okeke",
-    role: "Senior Developer • FUTO Labs",
+    role: "Senior Developer • Dev Labs",
     quote: "Documenting code in public and executing process-driven updates is part of Mayor's engineering identity. Highly collaborative and a stellar engineer.",
     avatar: "CO",
     linkedin: "https://www.linkedin.com/in/chidi-okeke",

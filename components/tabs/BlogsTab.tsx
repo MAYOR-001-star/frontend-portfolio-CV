@@ -19,12 +19,12 @@ const MediumIcon = () => (
 const blogs = [
   {
     id: "b1",
-    title: "FUTO Night Class Delusion: Surviving 2 AM Engineering Sprints",
-    excerpt: "A look at staying awake at the FUTO library, balancing academic math tests with client codebases, and building websites under fluctuating campus power grids.",
+    title: "Late Night Class Delusion: Surviving 2 AM Engineering Sprints",
+    excerpt: "A look at staying awake at the university library, balancing academic math tests with client codebases, and building websites under fluctuating campus power grids.",
     date: "Feb 10, 2026",
-    tags: ["Thoughts", "FUTO Life", "Engineering"],
+    tags: ["Thoughts", "Student Life", "Engineering"],
     platform: "medium",
-    link: "https://medium.com/@mayorazubike/futo-night-class-delusion-surviving-2-am-engineering-sprints-12345",
+    link: "https://medium.com/@mayorazubike/late-night-class-delusion-surviving-2-am-engineering-sprints-12345",
   },
   {
     id: "b2",

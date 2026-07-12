@@ -19,7 +19,7 @@ export const metadata: Metadata = {
     "React Developer",
     "React Native Developer",
     "Node.js Developer",
-    "Web Developer Nigeria",
+    "Web Developer",
     "Remote Full Stack Developer"
   ],
   authors: [{ name: "Mayor Azubike" }],
@@ -65,15 +65,15 @@ export default function RootLayout({
     "url": "https://iammayor.vercel.app",
     "image": "https://iammayor.vercel.app/Images/Mayor.jpg",
     "jobTitle": "Full-Stack Developer & Software Engineering Student",
-    "description": "Full-Stack Developer and Software Engineering Student at FUTO, building scalable web and mobile applications with React, React Native, and Node.js.",
-    "disambiguatingDescription": "Software Engineering Student and Full-Stack Developer based in Nigeria, distinct from Mayor Azubuike the Professor.",
+    "description": "Full-Stack Developer and Software Engineering Student, building scalable web and mobile applications with React, React Native, and Node.js.",
+    "disambiguatingDescription": "Software Engineering Student and Full-Stack Developer.",
     "worksFor": {
       "@type": "Organization",
       "name": "Self-Employed"
     },
     "alumniOf": {
       "@type": "CollegeOrUniversity",
-      "name": "Federal University of Technology, Owerri"
+      "name": "University of Technology"
     },
     "sameAs": [
       "https://www.linkedin.com/in/abdul-azeez-baruwa-505551316",

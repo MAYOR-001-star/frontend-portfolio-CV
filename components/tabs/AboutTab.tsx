@@ -9,7 +9,7 @@ export default function AboutTab() {
         </span>
         <h1 className="text-3xl md:text-5xl font-black tracking-tight font-display text-foreground leading-tight">
           I'm Mayor. I'm a Developer <br />
-          working from <span className="text-[#8f9cae]">Rivers, Nigeria.</span>
+          working <span className="text-[#8f9cae]">remotely.</span>
         </h1>
       </div>
 
@@ -17,7 +17,7 @@ export default function AboutTab() {
       <div className="grid grid-cols-1 md:grid-cols-2 gap-8 text-sm text-subtext leading-relaxed font-sans">
         <div className="flex flex-col gap-4">
           <p>
-            I study Software Engineering at FUTO (Federal University of Technology, Owerri). Being a developer to me means combining structural backend logic with smooth user interactions on frontend and mobile frameworks.
+            I study Software Engineering. Being a developer to me means combining structural backend logic with smooth user interactions on frontend and mobile frameworks.
           </p>
           <p>
             Before committing to code full-time, I worked as a technical virtual assistant, organizing digital projects, sorting servers, and fixing site layouts. This operational experience taught me the value of clean communication, client alignment, and documenting processes.
@@ -25,7 +25,7 @@ export default function AboutTab() {
         </div>
         <div className="flex flex-col gap-4">
           <p>
-            I spend my nights researching scalable systems and building practical platforms (like the Sale double-entry VTU ledger app or e-commerce models). As a student in Owerri, I balance research studies with writing performance code, publishing builds, and sharing insights.
+            I spend my nights researching scalable systems and building practical platforms (like the Sale double-entry VTU ledger app or e-commerce models). As an active developer, I balance academic research with writing performance code, publishing builds, and sharing insights.
           </p>
           <p className="border-l-2 border-accent/40 pl-4 text-xs italic font-mono text-foreground/80">
             "I believe in shipping fast, testing thoroughly, and designing backend operations to fail gracefully under heavy load conditions."
@@ -97,7 +97,7 @@ export default function AboutTab() {
               Frontend Developer <span className="text-subtext font-normal">• Techlift_official (Full-time)</span>
             </h4>
             <p className="text-[11px] text-subtext mt-1.5 max-w-2xl leading-relaxed">
-              Shipped polished, fully responsive interfaces using Tailwind CSS and Vite. Created real-time database schemas and user authentication flows using Supabase. (Lagos, Nigeria • Remote)
+              Shipped polished, fully responsive interfaces using Tailwind CSS and Vite. Created real-time database schemas and user authentication flows using Supabase. (Remote)
             </p>
           </div>
 
@@ -119,7 +119,7 @@ export default function AboutTab() {
               Frontend Web Developer <span className="text-subtext font-normal">• Cakkie Foods Ltd. (Internship)</span>
             </h4>
             <p className="text-[11px] text-subtext mt-1.5 max-w-2xl leading-relaxed">
-              Built dynamic user flows, transaction/order tracking dashboards, and interactive landing pages using Tailwind CSS and Vite.js. (Uyo, Akwa Ibom State, Nigeria • Remote)
+              Built dynamic user flows, transaction/order tracking dashboards, and interactive landing pages using Tailwind CSS and Vite.js. (Remote)
             </p>
           </div>
 
@@ -130,7 +130,7 @@ export default function AboutTab() {
               Frontend Web Developer <span className="text-subtext font-normal">• THE TRYBE CITY (Internship)</span>
             </h4>
             <p className="text-[11px] text-subtext mt-1.5 max-w-2xl leading-relaxed">
-              Created and optimized modular web components and styling assets for community features. Handled cross-browser testing and responsive layout structures. (Osun State, Nigeria • Hybrid)
+              Created and optimized modular web components and styling assets for community features. Handled cross-browser testing and responsive layout structures. (Hybrid)
             </p>
           </div>
         </div>
