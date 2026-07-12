@@ -1,6 +1,6 @@
 "use client";
 
-import { useState } from "react";
+import { useState, useEffect } from "react";
 import Link from "next/link";
 import { Sun, Moon, ArrowLeft } from "lucide-react";
 
@@ -21,9 +21,24 @@ export default function Header({
 }: HeaderProps) {
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
 
+  useEffect(() => {
+    if (isMobileMenuOpen) {
+      document.body.style.overflow = "hidden";
+    } else {
+      document.body.style.overflow = "";
+    }
+    return () => {
+      document.body.style.overflow = "";
+    };
+  }, [isMobileMenuOpen]);
+
   return (
-    <header className="border-b border-card-border bg-header backdrop-blur-md sticky top-0 z-40 transition-colors duration-500 relative">
-      <div className="max-w-5xl mx-auto px-6 h-16 flex items-center justify-between">
+    <header
+      className={`border-b border-card-border bg-header backdrop-blur-md sticky top-0 z-40 transition-colors duration-500 ${
+        isMobileMenuOpen ? "fixed inset-0 h-screen flex flex-col md:sticky md:h-auto md:block" : "relative"
+      }`}
+    >
+      <div className="max-w-5xl mx-auto px-6 h-16 flex items-center justify-between w-full shrink-0">
         {/* Logo */}
         {setActiveTab ? (
           <button
@@ -120,7 +135,7 @@ export default function Header({
 
       {/* Mobile Navigation Menu Dropdown */}
       {!showBackLink && isMobileMenuOpen && (
-        <div className="md:hidden fixed top-16 bottom-0 left-0 right-0 bg-background backdrop-blur-2xl transition-colors duration-500 z-30 animate-fade-in flex flex-col items-center justify-center p-6 gap-8">
+        <div className="md:hidden flex-1 bg-background backdrop-blur-2xl transition-colors duration-500 z-30 animate-fade-in flex flex-col items-center justify-center p-6 gap-8 w-full">
           <nav className="flex flex-col items-center gap-6 text-xl font-mono">
             {(["work", "about", "blogs", "contact"] as const).map((tab) => {
               const isActive = activeTab === tab;
