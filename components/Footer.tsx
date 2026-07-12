@@ -14,7 +14,7 @@ export default function Footer({ setActiveTab }: FooterProps) {
             Mayor<span className="text-[#8f9cae] font-normal font-mono">.dev</span>
           </span>
           <p className="text-[11px] text-subtext leading-relaxed">
-            Fullstack & mobile developer building high-quality web and native experiences — from React to React Native.
+            Frontend & mobile developer building high-quality web and native experiences from React to React Native.
           </p>
         </div>
 

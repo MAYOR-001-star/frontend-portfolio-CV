@@ -280,11 +280,11 @@ export default function WorkTab({ setActiveTab }: WorkTabProps) {
       <div className="flex flex-col-reverse md:flex-row items-start md:items-center justify-between gap-8 border-b border-card-border pb-12">
         <div className="flex-1 flex flex-col gap-4">
           <span className="text-xs font-mono text-accent uppercase tracking-widest font-bold">
-            Full-Stack Developer
+            Frontend Developer
           </span>
           <h1 className="text-3xl md:text-5xl font-black tracking-tight font-display">
             Hi. I'm Mayowa.<br />
-            <span className="text-[#8f9cae]">FullStack Dev.</span>
+            <span className="text-[#8f9cae]">Frontend Dev.</span>
           </h1>
           <p className="text-sm text-subtext leading-relaxed max-w-xl">
             I build and deploy full-stack web and mobile applications using modern JavaScript technologies. I focus on developing scalable user interfaces, reliable backend systems, and maintainable software solutions with an emphasis on performance, usability, and clean architecture.

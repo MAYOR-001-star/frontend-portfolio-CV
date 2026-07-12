@@ -9,11 +9,11 @@ const lexend = Lexend({
 });
 
 export const metadata: Metadata = {
-  title: "Mayor Azubike | Full-Stack Developer",
-  description: "Full-Stack Developer building modern, scalable web and mobile applications with JavaScript, React, React Native, Node.js, and PostgreSQL. I ship real products and document my work publicly.",
+  title: "Mayowa | Frontend Developer",
+  description: "Frontend Developer building modern, scalable web and mobile applications with JavaScript, React, React Native, Node.js, and PostgreSQL. I ship real products and document my work publicly.",
   keywords: [
-    "Mayor Azubike",
-    "Full-Stack Developer",
+    "Mayowa",
+    "Frontend Developer",
     "Mobile Developer",
     "JavaScript Developer",
     "React Developer",
@@ -22,19 +22,19 @@ export const metadata: Metadata = {
     "Web Developer",
     "Remote Full Stack Developer"
   ],
-  authors: [{ name: "Mayor Azubike" }],
+  authors: [{ name: "Mayowa" }],
   openGraph: {
     type: "website",
-    siteName: "Mayor Azubike | Full-Stack Developer",
-    url: "https://iammayor.vercel.app/",
-    title: "Mayor Azubike | Full-Stack Developer",
+    siteName: "Mayowa | Frontend Developer",
+    url: "https://mayowas-portfolio.vercel.app/",
+    title: "Mayowa | Frontend Developer",
     description: "I build and ship full-stack web and mobile applications using modern JavaScript technologies. Explore my projects, experience, and live builds.",
     images: [
       {
         url: "https://iammayor.vercel.app/Images/opengraph.png",
         width: 1200,
         height: 630,
-        alt: "Mayor Azubike – Full-Stack Developer Portfolio",
+        alt: "Mayor Azubike – Frontend Developer Portfolio",
       }
     ],
   },
@@ -42,8 +42,8 @@ export const metadata: Metadata = {
     card: "summary_large_image",
     site: "@faya_lordd",
     creator: "@faya_lordd",
-    title: "Mayor Azubike | Full-Stack Developer",
-    description: "Full-Stack Developer building real-world web and mobile applications with JavaScript, React, React Native, and Node.js. View my work and live projects.",
+    title: "Mayor Azubike | Frontend Developer",
+    description: "Frontend Developer building real-world web and mobile applications with JavaScript, React, React Native, and Node.js. View my work and live projects.",
     images: ["https://iammayor.vercel.app/Images/opengraph.png"],
   },
   verification: {
@@ -64,9 +64,9 @@ export default function RootLayout({
     "familyName": "Baruwa",
     "url": "https://iammayor.vercel.app",
     "image": "https://iammayor.vercel.app/Images/Mayor.jpg",
-    "jobTitle": "Full-Stack Developer & Software Engineering Student",
-    "description": "Full-Stack Developer and Software Engineering Student, building scalable web and mobile applications with React, React Native, and Node.js.",
-    "disambiguatingDescription": "Software Engineering Student and Full-Stack Developer.",
+    "jobTitle": "Frontend Developer & Software Engineering Student",
+    "description": "Frontend Developer and Software Engineering Student, building scalable web and mobile applications with React, React Native, and Node.js.",
+    "disambiguatingDescription": "Software Engineering Student and Frontend Developer.",
     "worksFor": {
       "@type": "Organization",
       "name": "Self-Employed"

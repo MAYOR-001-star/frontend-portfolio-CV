@@ -50,7 +50,7 @@ export default function ContactTab() {
               Let's build something real together.
             </h2>
             <p className="text-xs text-subtext leading-relaxed">
-              Have a freelance project, a technical requirement, or want to discuss full-stack developer opportunities? Copy my email or find me on socials.
+              Have a freelance project, a technical requirement, or want to discuss Frontend Developer opportunities? Copy my email or find me on socials.
             </p>
           </div>
 
