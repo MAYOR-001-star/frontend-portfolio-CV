@@ -37,6 +37,13 @@ export default function Home() {
     }
   }, []);
 
+  // Scroll to top when active tab changes on home page
+  useEffect(() => {
+    if (typeof window !== "undefined") {
+      window.scrollTo(0, 0);
+    }
+  }, [activeTab]);
+
   // Theme Persistence
   useEffect(() => {
     const savedTheme = localStorage.getItem("mayor-theme");

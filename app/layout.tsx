@@ -1,5 +1,7 @@
 import type { Metadata } from "next";
 import { Lexend } from "next/font/google";
+import { Suspense } from "react";
+import ScrollToTop from "@/components/ScrollToTop";
 import "./globals.css";
 
 const lexend = Lexend({
@@ -107,7 +109,12 @@ export default function RootLayout({
           dangerouslySetInnerHTML={{ __html: JSON.stringify(schemaJson) }}
         />
       </head>
-      <body className="min-h-full flex flex-col">{children}</body>
+      <body className="min-h-full flex flex-col">
+        <Suspense fallback={null}>
+          <ScrollToTop />
+        </Suspense>
+        {children}
+      </body>
     </html>
   );
 }
