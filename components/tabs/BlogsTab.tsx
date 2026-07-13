@@ -58,6 +58,7 @@ const blogs = [
 export default function BlogsTab() {
   const [searchQuery, setSearchQuery] = useState("");
   const [platformFilter, setPlatformFilter] = useState<"all" | "medium" | "linkedin">("all");
+  const [isDropdownOpen, setIsDropdownOpen] = useState(false);
 
   const filteredBlogs = blogs.filter((blog) => {
     const matchesSearch =
@@ -84,8 +85,20 @@ export default function BlogsTab() {
         </div>
 
         <div className="flex flex-col sm:flex-row items-center gap-3 w-full md:max-w-xl justify-end">
-          {/* Platform Filters */}
-          <div className="flex items-center gap-1.5 bg-badge p-1 rounded-xl text-[10px] font-mono border border-card-border w-full sm:w-auto justify-center">
+          {/* Search Box */}
+          <div className="relative w-full sm:max-w-xs">
+            <Search className="absolute left-3.5 top-1/2 -translate-y-1/2 w-3.5 h-3.5 text-subtext/60" />
+            <input
+              type="text"
+              value={searchQuery}
+              onChange={(e) => setSearchQuery(e.target.value)}
+              placeholder="Search articles..."
+              className="w-full bg-card border border-card-border rounded-xl py-2 pl-9 pr-4 text-xs font-mono placeholder-subtext/60 outline-none focus:border-accent transition-colors"
+            />
+          </div>
+
+          {/* Platform Filters - Desktop */}
+          <div className="hidden sm:flex items-center gap-1.5 bg-badge p-1 rounded-xl text-[10px] font-mono border border-card-border">
             {(["all", "medium", "linkedin"] as const).map((platform) => (
               <button
                 key={platform}
@@ -101,16 +114,44 @@ export default function BlogsTab() {
             ))}
           </div>
 
-          {/* Search Box */}
-          <div className="relative w-full sm:max-w-xs">
-            <Search className="absolute left-3.5 top-1/2 -translate-y-1/2 w-3.5 h-3.5 text-subtext/60" />
-            <input
-              type="text"
-              value={searchQuery}
-              onChange={(e) => setSearchQuery(e.target.value)}
-              placeholder="Search articles..."
-              className="w-full bg-card border border-card-border rounded-xl py-2 pl-9 pr-4 text-xs font-mono placeholder-subtext/60 outline-none focus:border-accent transition-colors"
-            />
+          {/* Platform Filters - Mobile */}
+          <div className="relative w-full sm:hidden">
+            <button
+              onClick={() => setIsDropdownOpen(!isDropdownOpen)}
+              className="w-full flex items-center justify-between bg-card border border-card-border rounded-xl py-2.5 px-3.5 text-xs font-mono text-foreground outline-none focus:border-accent transition-colors cursor-pointer font-bold capitalize"
+            >
+              <span>{platformFilter === "all" ? "All" : platformFilter}</span>
+              <svg className={`w-3.5 h-3.5 transition-transform duration-200 text-subtext ${isDropdownOpen ? "rotate-180" : ""}`} fill="none" stroke="currentColor" strokeWidth="2" viewBox="0 0 24 24">
+                <path d="M6 9l6 6 6-6" />
+              </svg>
+            </button>
+
+            {isDropdownOpen && (
+              <>
+                <div 
+                  className="fixed inset-0 z-10" 
+                  onClick={() => setIsDropdownOpen(false)}
+                />
+                <div className="absolute left-0 right-0 mt-1.5 bg-card border border-card-border rounded-xl shadow-lg z-20 overflow-hidden animate-in fade-in slide-in-from-top-1 duration-100">
+                  {(["all", "medium", "linkedin"] as const).map((platform) => (
+                    <button
+                      key={platform}
+                      onClick={() => {
+                        setPlatformFilter(platform);
+                        setIsDropdownOpen(false);
+                      }}
+                      className={`w-full text-left px-4 py-2 text-xs font-mono transition-colors capitalize cursor-pointer font-bold ${
+                        platformFilter === platform
+                          ? "bg-badge text-foreground font-black border-l-2 border-accent"
+                          : "text-subtext hover:bg-badge/50 hover:text-foreground"
+                      }`}
+                    >
+                      {platform === "all" ? "All" : platform}
+                    </button>
+                  ))}
+                </div>
+              </>
+            )}
           </div>
         </div>
       </div>

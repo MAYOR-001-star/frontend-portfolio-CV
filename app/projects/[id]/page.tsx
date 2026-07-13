@@ -7,6 +7,7 @@ import { ArrowLeft, ArrowUpRight, Sun, Moon } from "lucide-react";
 import { projects } from "@/app/data/projects";
 import Header from "@/components/Header";
 import Footer from "@/components/Footer";
+import OtherProjectsSlider from "@/components/OtherProjectsSlider";
 
 interface PageProps {
   params: Promise<{ id: string }>;
@@ -237,18 +238,10 @@ export default function ProjectDetailPage({ params }: PageProps) {
           </div>
         </div>
 
-        {/* See More Footer Link */}
-        <div className="flex flex-col items-center justify-center gap-2 border-t border-card-border/60 pt-16 mt-16 text-center">
-          <span className="text-xs text-subtext font-mono">Want to see more?</span>
-          <Link
-            href="/projects"
-            className="text-sm font-black text-foreground hover:text-accent font-display underline underline-offset-4 decoration-accent/60 hover:decoration-accent transition-all"
-          >
-            View All Projects
-          </Link>
-        </div>
-
       </main>
+
+      {/* Interactive Other Projects Slider */}
+      <OtherProjectsSlider excludeId={project.id} />
 
       {/* Global Footer component */}
       <Footer setActiveTab={(tab) => {

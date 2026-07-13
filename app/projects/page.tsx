@@ -14,9 +14,11 @@ import {
 import { projects } from "../data/projects";
 import Header from "@/components/Header";
 import Footer from "@/components/Footer";
+import OtherProjectsSlider from "@/components/OtherProjectsSlider";
 
 export default function ProjectsPage() {
   const [projectFilter, setProjectFilter] = useState<"all" | "web" | "mobile">("all");
+  const [isDropdownOpen, setIsDropdownOpen] = useState(false);
   const [theme, setTheme] = useState<"light" | "dark">("light");
 
   // Sync theme with local storage and document class
@@ -68,8 +70,8 @@ export default function ProjectsPage() {
             </h1>
           </div>
 
-          {/* Categories filter switches */}
-          <div className="flex items-center gap-2 bg-badge p-1 rounded-xl text-xs font-mono border border-card-border self-start sm:self-auto">
+          {/* Categories filter switches - Desktop */}
+          <div className="hidden sm:flex items-center gap-2 bg-badge p-1 rounded-xl text-xs font-mono border border-card-border sm:self-auto">
             <button
               onClick={() => setProjectFilter("all")}
               className={`px-3 py-1.5 rounded-lg transition-all cursor-pointer ${projectFilter === "all"
@@ -97,6 +99,46 @@ export default function ProjectsPage() {
             >
               Mobile
             </button>
+          </div>
+
+          {/* Categories filter switches - Mobile */}
+          <div className="relative w-full sm:hidden">
+            <button
+              onClick={() => setIsDropdownOpen(!isDropdownOpen)}
+              className="w-full flex items-center justify-between bg-card border border-card-border rounded-xl py-2.5 px-3.5 text-xs font-mono text-foreground outline-none focus:border-accent transition-colors cursor-pointer font-bold capitalize"
+            >
+              <span>{projectFilter === "all" ? "All" : projectFilter === "web" ? "Web" : "Mobile"}</span>
+              <svg className={`w-3.5 h-3.5 transition-transform duration-200 text-subtext ${isDropdownOpen ? "rotate-180" : ""}`} fill="none" stroke="currentColor" strokeWidth="2" viewBox="0 0 24 24">
+                <path d="M6 9l6 6 6-6" />
+              </svg>
+            </button>
+
+            {isDropdownOpen && (
+              <>
+                <div 
+                  className="fixed inset-0 z-10" 
+                  onClick={() => setIsDropdownOpen(false)}
+                />
+                <div className="absolute left-0 right-0 mt-1.5 bg-card border border-card-border rounded-xl shadow-lg z-20 overflow-hidden animate-in fade-in slide-in-from-top-1 duration-100">
+                  {(["all", "web", "mobile"] as const).map((filterOpt) => (
+                    <button
+                      key={filterOpt}
+                      onClick={() => {
+                        setProjectFilter(filterOpt);
+                        setIsDropdownOpen(false);
+                      }}
+                      className={`w-full text-left px-4 py-2 text-xs font-mono transition-colors capitalize cursor-pointer font-bold ${
+                        projectFilter === filterOpt
+                          ? "bg-badge text-foreground font-black border-l-2 border-accent"
+                          : "text-subtext hover:bg-badge/50 hover:text-foreground"
+                      }`}
+                    >
+                      {filterOpt === "all" ? "All" : filterOpt}
+                    </button>
+                  ))}
+                </div>
+              </>
+            )}
           </div>
         </div>
 
@@ -170,6 +212,9 @@ export default function ProjectsPage() {
           </div>
         )}
       </main>
+
+      {/* Interactive Other Projects Slider */}
+      <OtherProjectsSlider />
 
       {/* Global Footer */}
       <Footer setActiveTab={(tab) => {
